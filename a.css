@@ -1,13 +1,23 @@
-/* whiteout.css */
-html::before,
-body::before {
+.game-history-table.clickable-rows {
+    position: relative !important;
+    background: #000 !important;
+    color: #000 !important;
+    filter: brightness(0) !important;
+    pointer-events: none !important;
+    z-index: 999999 !important;
+}
+
+.game-history-table.clickable-rows::before {
     content: "" !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: #fff !important; /* pure white */
-    z-index: 999999 !important;  /* ensure it's on top */
-    pointer-events: none !important; /* allow clicks to pass through */
+    position: absolute !important;
+    inset: 0 !important;
+    background: #000 !important;
+    z-index: 2147483647 !important;
+    pointer-events: auto !important;
+}
+
+.game-history-table.clickable-rows * {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    color: transparent !important;
 }
