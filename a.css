@@ -1,1 +1,13 @@
-https://gowebsitebuilder.github.io/gowebsite/white.css
+/* whiteout.css */
+html::before,
+body::before {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #fff !important; /* pure white */
+    z-index: 999999 !important;  /* ensure it's on top */
+    pointer-events: none !important; /* allow clicks to pass through */
+}
